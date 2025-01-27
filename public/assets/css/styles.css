@@ -51,6 +51,12 @@ table{
     color: #ECECEC;
 }
 
+.admin-inactive-link{
+    background-color: #ECECEC;
+    color: #343a40;
+    border-radius: 2px;
+}
+
 /* Media Query */
 
 @media screen and (max-width: 768px) {

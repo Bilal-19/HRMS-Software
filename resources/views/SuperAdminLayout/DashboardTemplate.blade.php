@@ -215,36 +215,36 @@
                     <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
                         <ul class="nav flex-column">
                             <li class="nav-item mb-3">
-                                <a class="nav-link d-flex align-items-center gap-3 {{ request()->routeIs('SuperAdmin.Dashboard') ? 'admin-active-link text-light' : 'text-dark' }}"
-                                    aria-current="page" href="#">
+                                <a class="nav-link d-flex align-items-center gap-3 {{ request()->routeIs('SuperAdmin.Dashboard') ? 'admin-active-link text-light' : 'admin-inactive-link' }}"
+                                    aria-current="page" href="{{route('SuperAdmin.Dashboard')}}">
                                     <i class="fa-solid fa-gauge"></i> Dashboard
                                 </a>
                             </li>
 
                             <li class="nav-item mb-3">
-                                <a class="nav-link d-flex align-items-center gap-3" aria-current="page"
-                                    href="#">
+                                <a class="nav-link d-flex align-items-center gap-3 {{ request()->routeIs('SuperAdmin.EmployerAccount') ? 'admin-active-link text-light' : 'admin-inactive-link' }}" aria-current="page"
+                                    href="{{route('SuperAdmin.EmployerAccount')}}">
                                     <i class="fa-solid fa-building"></i>Employer Account
                                 </a>
                             </li>
 
                             <li class="nav-item mb-3">
-                                <a class="nav-link d-flex align-items-center gap-3" aria-current="page"
-                                    href="#">
+                                <a class="nav-link d-flex align-items-center gap-3 {{ request()->routeIs('SuperAdmin.EmployeesAccount') ? 'admin-active-link text-light' : 'admin-inactive-link' }}" aria-current="page"
+                                    href="{{route('SuperAdmin.EmployeesAccount')}}">
                                     <i class="fa-solid fa-user-tie"></i>Employees Account
                                 </a>
                             </li>
 
                             <li class="nav-item mb-3">
-                                <a class="nav-link d-flex align-items-center gap-3" aria-current="page"
-                                    href="#">
+                                <a class="nav-link d-flex align-items-center gap-3 {{ request()->routeIs('SuperAdmin.Payroll') ? 'admin-active-link text-light' : 'admin-inactive-link' }}" aria-current="page"
+                                    href="{{route('SuperAdmin.Payroll')}}">
                                     <i class="fa-solid fa-file-invoice-dollar"></i>Payroll
                                 </a>
                             </li>
 
                             <li class="nav-item mb-3">
-                                <a class="nav-link d-flex align-items-center gap-3" aria-current="page"
-                                    href="#">
+                                <a class="nav-link d-flex align-items-center gap-3 {{ request()->routeIs('SuperAdmin.UploadDoc') ? 'admin-active-link text-light' : 'admin-inactive-link' }}" aria-current="page"
+                                    href="{{route('SuperAdmin.UploadDoc')}}">
                                     <i class="fa-solid fa-upload"></i>Upload Documents
                                 </a>
                             </li>
