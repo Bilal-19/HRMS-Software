@@ -14,6 +14,10 @@ class SuperAdminController extends Controller
         return view('SuperAdmin.EmployerAccount');
     }
 
+    public function AddEmployer(){
+        return view("SuperAdmin.AddEmployer");
+    }
+
     public function EmployeesAccount(){
         return view('SuperAdmin.EmployeesAccount');
     }

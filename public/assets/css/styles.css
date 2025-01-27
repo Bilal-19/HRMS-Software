@@ -33,6 +33,14 @@ table{
     font-family: 'Lato', sans-serif;
 }
 
+.primary-btn{
+    background-color: #28a745;
+    color: #ECECEC;
+    text-decoration: none;
+    padding: 8px 6px;
+    border-radius: 6px;
+}
+
 
 /* Dashboard */
 .nav-item > .nav-link{

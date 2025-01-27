@@ -31,6 +31,7 @@ Route::middleware('auth')->group(function () {
 
 Route::get("/admin/dashboard",[SuperAdminController::class,'Dashboard'])->name('SuperAdmin.Dashboard');
 Route::get("/admin/employer/accounts",[SuperAdminController::class,'EmployerAccount'])->name('SuperAdmin.EmployerAccount');
+Route::get("/admin/add/employer",[SuperAdminController::class,'AddEmployer'])->name('SuperAdmin.AddEmployer');
 Route::get("/admin/employees/account",[SuperAdminController::class,'EmployeesAccount'])->name('SuperAdmin.EmployeesAccount');
 Route::get("/admin/payroll",[SuperAdminController::class,'Payroll'])->name('SuperAdmin.Payroll');
 Route::get("/admin/upload/documents",[SuperAdminController::class,'UploadDoc'])->name('SuperAdmin.UploadDoc');
