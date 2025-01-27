@@ -161,7 +161,7 @@
     <header class="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow" data-bs-theme="dark">
         {{-- 'navbar-brand' --}}
         <a class="text-decoration-none text-light p-1 col-md-4 col-lg-2 me-0 d-flex align-items-center justify-content-between"
-            href="{{route('Dashboard')}}">
+            href="{{route('SuperAdmin.Dashboard')}}">
             <img src="{{asset('company_logo.png')}}" alt="logo" style="height: 50px; width:50px;">
             <span class="mx-1">STERLING EXECUTIVE RESIDENTIAL</span>
         </a>
@@ -205,75 +205,13 @@
                     <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
                         <ul class="nav flex-column">
                             <li class="nav-item mb-3">
-                                <a class="nav-link ff-poppins d-flex align-items-center gap-3 {{ request()->routeIs('Dashboard') ? 'admin-active-link text-light' : 'text-dark' }}"
-                                    aria-current="page" href="{{ route('Dashboard') }}">
+                                <a class="nav-link ff-poppins d-flex align-items-center gap-3 {{ request()->routeIs('SuperAdmin.Dashboard') ? 'admin-active-link text-light' : 'text-dark' }}"
+                                    aria-current="page" href="#">
                                     <i class="fa-solid fa-gauge"></i> Dashboard
                                 </a>
                             </li>
 
-                            <li class="nav-item mb-3">
-                                <a class="nav-link ff-poppins d-flex align-items-center gap-3 {{ request()->routeIs('Apartments') ? 'admin-active-link text-light' : 'text-dark' }}"
-                                    aria-current="page" href="{{route('Apartments')}}">
-                                    <i class="fa-solid fa-building"></i>
-                                    Apartments
-                                </a>
-                            </li>
 
-                            <li class="nav-item mb-3">
-                                <a class="nav-link ff-poppins d-flex align-items-center gap-3 {{ request()->routeIs('Favourite.Apartment') ? 'admin-active-link text-light' : 'text-dark' }}"
-                                    aria-current="page" href="{{ route('Favourite.Apartment') }}">
-                                    <i class="fa-solid fa-building-user"></i>
-                                    Favourite Apartments
-                                </a>
-                            </li>
-
-                            <li class="nav-item mb-3">
-                                <a class="nav-link ff-poppins d-flex align-items-center gap-3 {{ request()->routeIs('Benefits') ? 'admin-active-link text-light' : 'text-dark' }}"
-                                    aria-current="page" href="{{ route('Benefits') }}">
-                                    <i class="fa-solid fa-concierge-bell"></i>
-                                    Amenities
-                                </a>
-                            </li>
-
-                            <li class="nav-item mb-3">
-                                <a class="nav-link ff-poppins d-flex align-items-center gap-3 {{ request()->routeIs('Blog') ? 'admin-active-link text-light' : 'text-dark' }}" href="{{route('Blog')}}">
-                                    <i class="fa-solid fa-newspaper"></i> Blogs
-                                </a>
-                            </li>
-
-                            <li class="nav-item mb-3">
-                                <a class="nav-link ff-poppins d-flex align-items-center gap-3 {{ request()->routeIs('View.Booking') ? 'admin-active-link text-light' : 'text-dark' }}"
-                                    href="{{route('View.Booking')}}">
-                                    <i class="fa-solid fa-handshake"></i>
-                                   Booking
-                                </a>
-                            </li>
-
-                            <li class="nav-item mb-3">
-                                <a class="nav-link ff-poppins d-flex align-items-center gap-3 {{ request()->routeIs('Policy') ? 'admin-active-link text-light' : 'text-dark' }}" href="{{route('Policy')}}">
-                                    <i class="fa-regular fa-file-alt"></i>Policy
-
-                                </a>
-                            </li>
-
-                            <li class="nav-item mb-3">
-                                <a class="nav-link ff-poppins d-flex align-items-center gap-3 {{ request()->routeIs('Read.Queries') ? 'admin-active-link text-light' : 'text-dark' }}" href="{{route('Read.Queries')}}">
-                                    <i class="fa-regular fa-comment-dots"></i>Customer Inquiries
-                                </a>
-                            </li>
-
-                            <li class="nav-item mb-3">
-                                <a class="nav-link ff-poppins d-flex align-items-center gap-3 {{ request()->routeIs('View.Users') ? 'admin-active-link text-light' : 'text-dark' }}" href="{{route('View.Users')}}">
-                                    <i class="fa-solid fa-users"></i>User Management
-                                </a>
-                            </li>
-
-                            <li class="nav-item mb-3">
-                                <a class="nav-link ff-poppins d-flex align-items-center gap-3" href="{{route("Admin.Logout")}}">
-                                    <i class="fas fa-sign-out"></i>
-                                    Sign out
-                                </a>
-                            </li>
 
                         </ul>
                     </div>
