@@ -163,7 +163,7 @@
         <a class="text-decoration-none text-light p-1 col-md-4 col-lg-2 me-0 d-flex align-items-center justify-content-between"
             href="{{route('SuperAdmin.Dashboard')}}">
             <img src="{{asset('company_logo.png')}}" alt="logo" style="height: 50px; width:50px;">
-            <span class="mx-1">STERLING EXECUTIVE RESIDENTIAL</span>
+            <span class="mx-1">Human Resource Management Software</span>
         </a>
         <ul class="navbar-nav flex-row d-md-none">
             <li class="nav-item text-nowrap">
@@ -211,7 +211,33 @@
                                 </a>
                             </li>
 
+                            <li class="nav-item mb-3">
+                                <a class="nav-link ff-poppins d-flex align-items-center gap-3"
+                                    aria-current="page" href="#">
+                                    <i class="fa-solid fa-building"></i>Employer Account
+                                </a>
+                            </li>
 
+                            <li class="nav-item mb-3">
+                                <a class="nav-link ff-poppins d-flex align-items-center gap-3"
+                                    aria-current="page" href="#">
+                                    <i class="fa-solid fa-user-tie"></i>Employees Account
+                                </a>
+                            </li>
+
+                            <li class="nav-item mb-3">
+                                <a class="nav-link ff-poppins d-flex align-items-center gap-3"
+                                    aria-current="page" href="#">
+                                    <i class="fa-solid fa-file-invoice-dollar"></i>Payroll
+                                </a>
+                            </li>
+
+                            <li class="nav-item mb-3">
+                                <a class="nav-link ff-poppins d-flex align-items-center gap-3"
+                                    aria-current="page" href="#">
+                                    <i class="fa-solid fa-upload"></i>Upload Documents
+                                </a>
+                            </li>
 
                         </ul>
                     </div>
