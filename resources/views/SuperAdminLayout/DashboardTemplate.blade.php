@@ -5,12 +5,22 @@
     <script src="{{ asset('js/color-modes.js') }}"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sterling Executive International</title>
+    <title>HRMS - Software</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/dashboard/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-    <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
+
+    {{-- Import Stylesheets --}}
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
+
+    {{-- Import Google Fonts --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
     <!-- Custom styles for this template -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
@@ -19,7 +29,7 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <link rel="stylesheet" href="{{asset('assets/css/styles.css')}}">
+
     @stack('style')
 </head>
 
@@ -161,8 +171,8 @@
     <header class="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow" data-bs-theme="dark">
         {{-- 'navbar-brand' --}}
         <a class="text-decoration-none text-light p-1 col-md-4 col-lg-2 me-0 d-flex align-items-center justify-content-between"
-            href="{{route('SuperAdmin.Dashboard')}}">
-            <img src="{{asset('company_logo.png')}}" alt="logo" style="height: 50px; width:50px;">
+            href="{{ route('SuperAdmin.Dashboard') }}">
+            <img src="{{ asset('company_logo.png') }}" alt="logo" style="height: 50px; width:50px;">
             <span class="mx-1">Human Resource Management Software</span>
         </a>
         <ul class="navbar-nav flex-row d-md-none">
@@ -212,29 +222,29 @@
                             </li>
 
                             <li class="nav-item mb-3">
-                                <a class="nav-link d-flex align-items-center gap-3"
-                                    aria-current="page" href="#">
+                                <a class="nav-link d-flex align-items-center gap-3" aria-current="page"
+                                    href="#">
                                     <i class="fa-solid fa-building"></i>Employer Account
                                 </a>
                             </li>
 
                             <li class="nav-item mb-3">
-                                <a class="nav-link d-flex align-items-center gap-3"
-                                    aria-current="page" href="#">
+                                <a class="nav-link d-flex align-items-center gap-3" aria-current="page"
+                                    href="#">
                                     <i class="fa-solid fa-user-tie"></i>Employees Account
                                 </a>
                             </li>
 
                             <li class="nav-item mb-3">
-                                <a class="nav-link d-flex align-items-center gap-3"
-                                    aria-current="page" href="#">
+                                <a class="nav-link d-flex align-items-center gap-3" aria-current="page"
+                                    href="#">
                                     <i class="fa-solid fa-file-invoice-dollar"></i>Payroll
                                 </a>
                             </li>
 
                             <li class="nav-item mb-3">
-                                <a class="nav-link d-flex align-items-center gap-3"
-                                    aria-current="page" href="#">
+                                <a class="nav-link d-flex align-items-center gap-3" aria-current="page"
+                                    href="#">
                                     <i class="fa-solid fa-upload"></i>Upload Documents
                                 </a>
                             </li>
