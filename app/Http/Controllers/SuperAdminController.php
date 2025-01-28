@@ -15,7 +15,8 @@ class SuperAdminController extends Controller
 
     public function EmployerAccount()
     {
-        return view('SuperAdmin.EmployerAccount');
+        $fetchEmployerAccounts = DB::table('employer')->get();
+        return view('SuperAdmin.EmployerAccount', with(compact('fetchEmployerAccounts')));
     }
 
     public function AddEmployer()
