@@ -25,7 +25,6 @@ class SuperAdminController extends Controller
 
     public function createEmployerAccount(Request $request)
     {
-        print_r($request->all());
         // Form Validation
         $request->validate([
             'owner_name' => 'required',
@@ -39,7 +38,7 @@ class SuperAdminController extends Controller
             'industry_type' => 'required',
         ]);
 
-        // Store Employer Information
+        // Store Employer Information - Employer table
         $isRecCreated = DB::table('employer')->insert([
             'owner_name' => $request->owner_name,
             'name' => $request->company_name,
@@ -63,6 +62,10 @@ class SuperAdminController extends Controller
         ]);
 
         if ($isRecCreated && $isEmployerSignUp){
+            toastr()->success('Employer Account Created Successfully');
+            return redirect()->route('SuperAdmin.EmployerAccount');
+        } else {
+            toastr()->warning('Something went wrong. Please try again later');
             return redirect()->back();
         }
     }
