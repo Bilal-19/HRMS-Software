@@ -71,6 +71,11 @@ class SuperAdminController extends Controller
         }
     }
 
+    public function EditEmployerAccount($id){
+        $findEmployerAccount = DB::table('employer')->find($id);
+        return view('SuperAdmin.EditEmployer', with(compact('findEmployerAccount')));
+    }
+
     public function EmployeesAccount()
     {
         return view('SuperAdmin.EmployeesAccount');

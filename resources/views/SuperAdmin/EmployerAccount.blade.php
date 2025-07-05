@@ -29,7 +29,7 @@
                             <td>{{ $rec->phone_number }}</td>
                             <td>{{ $rec->total_employees }}</td>
                             <td>
-                                <a href="" class="text-primary">
+                                <a href="{{route('SuperAdmin.EditEmployerAccount', ['id'=>$rec->id])}}" class="text-primary">
                                     <i class="fas fa-edit"></i>
                                 </a>
                             </td>

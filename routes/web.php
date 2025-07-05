@@ -34,6 +34,7 @@ Route::get("/admin/dashboard",[SuperAdminController::class,'Dashboard'])->name('
 Route::get("/admin/employer/accounts",[SuperAdminController::class,'EmployerAccount'])->name('SuperAdmin.EmployerAccount');
 Route::get("/admin/add/employer",[SuperAdminController::class,'AddEmployer'])->name('SuperAdmin.AddEmployer');
 Route::post("/admin/create/employer",[SuperAdminController::class,'createEmployerAccount'])->name('SuperAdmin.createEmployerAccount');
+Route::get("/admin/edit/employer/{id}",[SuperAdminController::class,'EditEmployerAccount'])->name('SuperAdmin.EditEmployerAccount');
 
 
 Route::get("/admin/employees/account",[SuperAdminController::class,'EmployeesAccount'])->name('SuperAdmin.EmployeesAccount');

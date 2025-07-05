@@ -1,0 +1,34 @@
+.bg-purple{
+    background-color: #00085d;
+}
+
+
+/* Dashboard */
+.nav-item > .nav-link{
+    color: #00085d;
+}
+.nav-item > .nav-link:hover {
+    color: #6670dd;
+}
+.admin-active-link{
+    background-color: #ffffff;
+    color: #00085d;
+    border-radius: 6px;
+}
+
+.admin-active-link:hover{
+    color: #ECECEC;
+}
+
+.admin-inactive-link{
+    background-color: #00085d;
+    color: #ffffff !important;
+    border-radius: 2px;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 768px) {
+    /* Hiding the logo which is appearing on the center of the navbar for small screen */
+
+}

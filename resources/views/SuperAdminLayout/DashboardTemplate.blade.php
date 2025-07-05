@@ -12,7 +12,6 @@
     {{-- Import Stylesheets --}}
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
 
     {{-- Import Google Fonts --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,7 +29,13 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
-    @stack('style')
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ asset('assets/css/SuperAdmin.css') }}">
 </head>
 
 <body>
@@ -55,13 +60,6 @@
     </svg>
 
     <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-        {{-- <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
-            aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
-            <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
-                <use href="#circle-half"></use>
-            </svg>
-            <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-        </button> --}}
         <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
             <li>
                 <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
@@ -168,12 +166,11 @@
         </symbol>
     </svg>
 
-    <header class="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow" data-bs-theme="dark">
+    <header class="navbar sticky-top bg-purple flex-md-nowrap p-0 shadow" data-bs-theme="dark">
         {{-- 'navbar-brand' --}}
-        <a class="text-decoration-none text-light p-1 col-md-4 col-lg-2 me-0 d-flex align-items-center justify-content-between"
+        <a class="text-decoration-none p-1 col-md-4 col-lg-2 me-0 d-flex align-items-center justify-content-between"
             href="{{ route('SuperAdmin.Dashboard') }}">
-            <img src="{{ asset('company_logo.png') }}" alt="logo" style="height: 50px; width:50px;">
-            <span class="mx-1">Human Resource Management Software</span>
+            <img src="{{ asset("assets/images/company_logo.png") }}" alt="logo" style="height: 100px;">
         </a>
         <ul class="navbar-nav flex-row d-md-none">
             <li class="nav-item text-nowrap">
@@ -204,7 +201,7 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="sidebar border border-right col-md-3 col-lg-2 p-0">
+            <div class="sidebar border border-right col-md-3 col-lg-2 p-0 bg-purple">
                 <div class="offcanvas-md offcanvas-end" tabindex="-1" id="sidebarMenu"
                     aria-labelledby="sidebarMenuLabel">
                     <div class="offcanvas-header">
@@ -212,39 +209,39 @@
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
                             data-bs-target="#sidebarMenu" aria-label="Close"></button>
                     </div>
-                    <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
+                    <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto h-100">
                         <ul class="nav flex-column">
-                            <li class="nav-item mb-3">
-                                <a class="nav-link d-flex align-items-center gap-3 {{ request()->routeIs('SuperAdmin.Dashboard') ? 'admin-active-link text-light' : 'admin-inactive-link' }}"
-                                    aria-current="page" href="{{route('SuperAdmin.Dashboard')}}">
+                            <li class="nav-item mb-4">
+                                <a class="nav-link d-flex align-items-center gap-3 {{ request()->routeIs('SuperAdmin.Dashboard') ? 'admin-active-link' : 'admin-inactive-link' }}"
+                                    aria-current="page" href="{{ route('SuperAdmin.Dashboard') }}">
                                     <i class="fa-solid fa-gauge"></i> Dashboard
                                 </a>
                             </li>
 
-                            <li class="nav-item mb-3">
-                                <a class="nav-link d-flex align-items-center gap-3 {{ request()->routeIs('SuperAdmin.EmployerAccount') ? 'admin-active-link text-light' : 'admin-inactive-link' }}" aria-current="page"
-                                    href="{{route('SuperAdmin.EmployerAccount')}}">
+                            <li class="nav-item mb-4">
+                                <a class="nav-link d-flex align-items-center gap-3 {{ request()->routeIs('SuperAdmin.EmployerAccount') ? 'admin-active-link' : 'admin-inactive-link' }}"
+                                    aria-current="page" href="{{ route('SuperAdmin.EmployerAccount') }}">
                                     <i class="fa-solid fa-building"></i>Employer Account
                                 </a>
                             </li>
 
-                            <li class="nav-item mb-3">
-                                <a class="nav-link d-flex align-items-center gap-3 {{ request()->routeIs('SuperAdmin.EmployeesAccount') ? 'admin-active-link text-light' : 'admin-inactive-link' }}" aria-current="page"
-                                    href="{{route('SuperAdmin.EmployeesAccount')}}">
+                            <li class="nav-item mb-4">
+                                <a class="nav-link d-flex align-items-center gap-3 {{ request()->routeIs('SuperAdmin.EmployeesAccount') ? 'admin-active-link' : 'admin-inactive-link' }}"
+                                    aria-current="page" href="{{ route('SuperAdmin.EmployeesAccount') }}">
                                     <i class="fa-solid fa-user-tie"></i>Employees Account
                                 </a>
                             </li>
 
-                            <li class="nav-item mb-3">
-                                <a class="nav-link d-flex align-items-center gap-3 {{ request()->routeIs('SuperAdmin.Payroll') ? 'admin-active-link text-light' : 'admin-inactive-link' }}" aria-current="page"
-                                    href="{{route('SuperAdmin.Payroll')}}">
+                            <li class="nav-item mb-4">
+                                <a class="nav-link d-flex align-items-center gap-3 {{ request()->routeIs('SuperAdmin.Payroll') ? 'admin-active-link' : 'admin-inactive-link' }}"
+                                    aria-current="page" href="{{ route('SuperAdmin.Payroll') }}">
                                     <i class="fa-solid fa-file-invoice-dollar"></i>Payroll
                                 </a>
                             </li>
 
-                            <li class="nav-item mb-3">
-                                <a class="nav-link d-flex align-items-center gap-3 {{ request()->routeIs('SuperAdmin.UploadDoc') ? 'admin-active-link text-light' : 'admin-inactive-link' }}" aria-current="page"
-                                    href="{{route('SuperAdmin.UploadDoc')}}">
+                            <li class="nav-item mb-4">
+                                <a class="nav-link d-flex align-items-center gap-3 {{ request()->routeIs('SuperAdmin.UploadDoc') ? 'admin-active-link' : 'admin-inactive-link' }}"
+                                    aria-current="page" href="{{ route('SuperAdmin.UploadDoc') }}">
                                     <i class="fa-solid fa-upload"></i>Upload Documents
                                 </a>
                             </li>
